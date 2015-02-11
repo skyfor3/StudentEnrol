@@ -8,6 +8,7 @@ String code
 Date startDate
 Date endDate
 String description
+static hasMany=[lecturers:Lecturer,modules:Module,students:Student]
 
 String toString(){
 "$title, $code, $department"

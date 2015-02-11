@@ -36,6 +36,38 @@ class BootStrap {
                               startDate: new Date('01/09/2015'),
                               endDate: new Date('02/09/2040')).save()
 
+      def lect1=new Lecturer (name:'Dr Steve Crossbar',
+                              post:'Lecturer',
+                              email:'s.h.crossbar@theUni.ac.uk',
+                              department:'Computing',
+                              subject:'Web Desin',
+                              research:'Knowledge Management').save()
+
+      def module1=new Module (title: 'Web Architectures',
+                             code:'WA234',
+                             credits:5,
+                             lecturer:Lecturer.findByName('Dr Steve Crossbar'),
+                             description:'''Ldafert ergdsf gfdg sdg''').save()
+
+      def module2=new Module (title: 'Programming',
+                             code:'WA2w24234234',
+                             credits:10,
+                             lecturer:Lecturer.findByName('Dr Steve Crossbar'),
+                             description:'''PROGRAMMMMMMMMMMMMMING''').save()
+
+    def student1=new Student (name: 'John Smith',
+                             studentid:1,
+                             dob:'10.01.2000',
+                             email:'mail@box.com',
+                             username:'st1',
+                             password:'pwd1').save()
+                             
+
+course1.addToModules(module1)
+course1.addToModules(module2)                             
+course1.addToLecturers(lect1)
+course2.addToLecturers(lect1)
+course1.addToStudents(student1)
 
    
 }
